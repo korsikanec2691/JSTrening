@@ -1,0 +1,41 @@
+ table {
+     border: 1px solid black;
+     border-collapse: collapse;
+     width: 100%;
+     max-width: 1000px;
+     margin: 0 auto;
+ }
+
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bg-grey {
+    background-color: #c1c1c1;
+
+}
+
+.title {
+    margin-left: 750px;
+    /* margin: 0 auto; */
+}
+
+.my__email {
+    border: none;
+}
+
+.my__email td, .my__email th {
+    border: none;
+}
+
+
+
