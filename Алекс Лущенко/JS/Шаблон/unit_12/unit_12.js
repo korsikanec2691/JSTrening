@@ -141,7 +141,13 @@ function f9() {
         [21, -34, -43],
         [44, -56]
     ];
-
+    
+    for (let i = 0; i < a9.length; i++) {
+        for (let k = 0; k < a9[i].length; k++) {
+            if (a9[i][k] > 0) out += a9[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-9').innerHTML = out;
 
 }
 
@@ -159,6 +165,13 @@ function f10() {
         ['st', 21, -34, -43],
         [44, -56, 'task']
     ];
+
+    for (let i = 0; i < a10.length; i++) {
+        for (let k = 0; k < a10[i].length; k++) {
+            if(typeof a10[i][k] == 'string') out += a10[i][k] + ' ';
+        }
+    }
+    document.querySelector('.out-10').innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -175,6 +188,13 @@ let a11 = [
 
 function f11() {
     let out = '';
+    for (let i =  0; i < a11.length; i++) {
+        for (let k = a11[i].length - 1; k>=0; k--) {
+
+            out += a11[i][k] + ' ;'
+        }
+    }
+    document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -183,6 +203,7 @@ document.querySelector('.b-11').onclick = f11;
 // Дан массив a12 который моделирует шахматную доску. Используя цикл выведите в out-12 единицы из этого массива. Все действия в функции f12. Функция запускается при нажатии на b12. Вывод через пробел.
 
 function f12() {
+    let out = '';
     let a12 = [
         [0,1,0,1,0,1,0,1],
         [1,0,1,0,1,0,1,0],
@@ -193,6 +214,12 @@ function f12() {
         [0,1,0,1,0,1,0,1],
         [1,0,1,0,1,0,1,0],
     ];
+    for (let i = 0; i < a12.length; i++) {
+        for (let k = 0; k < a12[i].length; k++) {
+            if (a12[i][k] == 1) out += a12[i][k] + ' ';
+        }
+        document.querySelector('.out-12').innerHTML = out;
+    }
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -203,6 +230,15 @@ document.querySelector('.b-12').onclick = f12;
 let a13 = [];
 
 function f13() {
+    let out = '';
+    for (let i = 0; i < 9; i++) {
+        a13 += [i];
+        for (let k = 0; k < 9; k++) {
+            if (a13[i][k] >= 0 && a13[i][k] < 2) out += a13[i][k] + ' ';
+        }
+        console.log(out)
+        document.querySelector('.out-13').innerHTML = out;
+    }
 
 }
 
